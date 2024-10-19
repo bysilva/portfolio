@@ -11,7 +11,7 @@ const nextConfig = {
     unoptimized: true, // Disable default image optimization
   },
   assetPrefix: isProd ? '/portfolio/' : '/portfolio/',
-  basePath: isProd ? '/portfolio' : '/portfolio/',
+  basePath: isProd ? '/portfolio' : '/portfolio',
   output: 'export',
   webpack: (config) => {
     config.cache = false
