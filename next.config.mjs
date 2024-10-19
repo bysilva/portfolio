@@ -2,18 +2,21 @@ import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
 
+const isProd = process.env.NODE_ENV === 'production'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  experimental: {
-    outputFileTracingIncludes: {
-      '/articles/*': ['./src/app/articles/**/*.mdx'],
-    },
-  },
+  reactStrictMode: true,
   images: {
-    unoptimized: true, // Deshabilitar la optimización de imágenes
+    unoptimized: true, // Disable default image optimization
   },
-  output: 'export', // Asegúrate de que esta línea esté aquí
+  assetPrefix: isProd ? '/portfolio/' : '/portfolio/',
+  basePath: isProd ? '/portfolio' : '/portfolio/',
+  output: 'export',
+  webpack: (config) => {
+    config.cache = false
+    return config
+  },
 }
 
 const withMDX = nextMDX({

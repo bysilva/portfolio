@@ -70,7 +70,8 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Edgar Eduardo. I live in Monterrey, where I build the future.
+            I&rsquo;m Edgar Eduardo. I live in Monterrey, where I build the
+            future.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -87,7 +88,7 @@ export default function About() {
               At Alluxi, my technical skills grew, particularly in .NET,
               allowing me to deepen my knowledge in C#. I also had the
               opportunity to work on various projects using Python Django and,
-              more recently, I've developed strong skills in React and
+              more recently, I&rsquo;ve developed strong skills in React and
               TypeScript.
             </p>
             <p>
@@ -97,13 +98,13 @@ export default function About() {
               photography.
             </p>
             <p>
-              Throughout my journey, I've learned that achieving success is not
-              just about honing technical skills, but also about maintaining a
-              healthy balance in life. I believe in the importance of nurturing
-              both physical and mental well-being, as they are crucial to
-              sustaining long-term growth and creativity. By dedicating time to
-              my health and personal development, I’m able to bring my best self
-              to every project and challenge I face.
+              Throughout my journey, I&rsquo;ve learned that achieving success
+              is not just about honing technical skills, but also about
+              maintaining a healthy balance in life. I believe in the importance
+              of nurturing both physical and mental well-being, as they are
+              crucial to sustaining long-term growth and creativity. By
+              dedicating time to my health and personal development, I&rsquo;m
+              able to bring my best self to every project and challenge I face.
             </p>
 
             <p>
