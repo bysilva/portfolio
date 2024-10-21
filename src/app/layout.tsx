@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Edgar Eduardo - Software Engineer, Cloud Enthusiast, and Tech Passionate',
   },
   description:
-    'I’m Edgar, a software engineer based in Monterrey. With four years of professional experience, I’ve worked with technologies like .NET, C#, Python Django, React, and TypeScript. I’m passionate about cloud technologies and have a strong interest in AWS. My goal is to build innovative solutions while maintaining a healthy balance between professional growth and personal well-being.',
+    'I’m Edgar, a software engineer based in Monterrey. With four years of professional experience, I’ve worked with technologies like .NET, C#, Python, Django, React, and TypeScript. I’m passionate about cloud technologies and have a strong interest in AWS. My goal is to build innovative solutions while maintaining a healthy balance between professional growth and personal well-being.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,

@@ -11,11 +11,11 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import { getAllArticles, type ArticleWithSlug } from '@/lib/articles'
+import { type ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-import alluxiLogo from '@/images/logos/alluxi.png'
 import SkillsTable from '@/components/SkillsTable'
+import alluxiLogo from '@/images/logos/alluxi.png'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (

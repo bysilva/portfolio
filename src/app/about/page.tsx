@@ -87,7 +87,7 @@ export default function About() {
             <p>
               At Alluxi, my technical skills grew, particularly in .NET,
               allowing me to deepen my knowledge in C#. I also had the
-              opportunity to work on various projects using Python Django and,
+              opportunity to work on various projects using Python, Django and,
               more recently, I&rsquo;ve developed strong skills in React and
               TypeScript.
             </p>
