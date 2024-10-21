@@ -250,10 +250,10 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I’m Edgar, a software engineer based in Monterrey. With four years
             of professional experience, I’ve worked with technologies like .NET,
-            C#, Python Django, React, and TypeScript. I’m passionate about cloud
-            technologies and have a strong interest in AWS. My goal is to build
-            innovative solutions while maintaining a healthy balance between
-            professional growth and personal well-being.
+            C#, Python, Django, React, and TypeScript. I’m passionate about
+            cloud technologies and have a strong interest in AWS. My goal is to
+            build innovative solutions while maintaining a healthy balance
+            between professional growth and personal well-being.
           </p>
 
           <div className="mt-6 flex gap-6">
