@@ -1,6 +1,7 @@
 'use client' // Esto habilita que el componente sea del lado del cliente
 
 import { Button } from '@/components/Button'
+import { useTranslation } from '@/context/TranslationContext'
 import alluxiLogo from '@/images/logos/alluxi.png'
 import Image, { type ImageProps } from 'next/image'
 
@@ -72,6 +73,7 @@ function Role({ role }: { role: Role }) {
 }
 
 function Resume() {
+  const { t } = useTranslation()
   let resume: Array<Role> = [
     {
       company: 'Alluxi',
@@ -94,7 +96,7 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">{t('work')}</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -106,7 +108,7 @@ function Resume() {
         variant="secondary"
         className="group mt-6 w-full"
       >
-        Download CV ENG
+        {t('downloadCVENG')}
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
       <Button
@@ -114,7 +116,7 @@ function Resume() {
         variant="secondary"
         className="group mt-6 w-full"
       >
-        Download CV ESP
+        {t('downloadCVESP')}
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>

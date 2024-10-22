@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,6 +14,7 @@ import image5 from '@/images/photos/image-5.jpg'
 
 import SkillsTable from '@/components/SkillsTable'
 import Resume from '@/components/Resume'
+import { useTranslation } from '@/context/TranslationContext'
 
 function SocialLink({
   icon: Icon,
@@ -53,21 +56,18 @@ function Photos() {
   )
 }
 
-export default async function Home() {
+export default function Home() {
+  const { t } = useTranslation()
+
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software Engineer, Cloud Enthusiast, and Tech Passionate.
+            {t('title')}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Edgar, a software engineer based in Monterrey. With four years
-            of professional experience, I’ve worked with technologies like .NET,
-            C#, Python, Django, React, and TypeScript. I’m passionate about
-            cloud technologies and have a strong interest in AWS. My goal is to
-            build innovative solutions while maintaining a healthy balance
-            between professional growth and personal well-being.
+            {t('description')}
           </p>
 
           <div className="mt-6 flex gap-6">

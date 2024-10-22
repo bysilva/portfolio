@@ -1,17 +1,14 @@
-import { type Metadata } from 'next'
+'use client'
+
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import { useTranslation } from '@/context/TranslationContext'
 import imageTwo from '@/images/photos/image-2.jpg'
+import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({
   className,
@@ -48,13 +45,9 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'I’m Edgar Eduardo. I live in Monterrey, where I build the future.',
-}
-
 export default function About() {
+  const { t } = useTranslation()
+
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -70,43 +63,14 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&rsquo;m Edgar Eduardo. I live in Monterrey, where I build the
-            future.
+            {t('about')}
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              I started my professional career by graduating as a systems
-              engineer, beginning as an intern at the renowned Comisión Federal
-              de Electricidad (CFE) in Sabinas.
-            </p>
-            <p>
-              My contributions in various internal projects opened the door for
-              me to move to Monterrey, where I was recruited by Alluxi after
-              finishing my internship.
-            </p>
-            <p>
-              At Alluxi, my technical skills grew, particularly in .NET,
-              allowing me to deepen my knowledge in C#. I also had the
-              opportunity to work on various projects using Python, Django and,
-              more recently, I&rsquo;ve developed strong skills in React and
-              TypeScript.
-            </p>
-            <p>
-              I have a keen interest in AWS and cloud services. Beyond
-              technology, I am passionate about flying drones, making
-              promotional videos, and capturing landscapes through video and
-              photography.
-            </p>
-            <p>
-              Throughout my journey, I&rsquo;ve learned that achieving success
-              is not just about honing technical skills, but also about
-              maintaining a healthy balance in life. I believe in the importance
-              of nurturing both physical and mental well-being, as they are
-              crucial to sustaining long-term growth and creativity. By
-              dedicating time to my health and personal development, I&rsquo;m
-              able to bring my best self to every project and challenge I face.
-            </p>
-
+            <p>{t('aboutParagraphOne')}</p>
+            <p>{t('aboutParagraphTwo')}</p>
+            <p>{t('aboutParagraphThree')}</p>
+            <p>{t('aboutParagraphFour')}</p>
+            <p>{t('aboutParagraphFive')}</p>
             <p>
               <Image
                 src={imageTwo}
@@ -123,21 +87,21 @@ export default function About() {
               icon={GitHubIcon}
               className="mt-4"
             >
-              Follow on GitHub
+              {t('followOnGithub')}
             </SocialLink>
             <SocialLink
               href="https://mx.linkedin.com/in/edgar-eduardo-piedra-silva"
               icon={LinkedInIcon}
               className="mt-4"
             >
-              Follow on LinkedIn
+              {t('followOnLinkedIn')}
             </SocialLink>
             <SocialLink
-              href="mailto:eepsmr48@gmail.com"
+              href={`mailto:${t('email')}`}
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              eepsmr48@gmail.com
+              {t('email')}
             </SocialLink>
           </ul>
         </div>

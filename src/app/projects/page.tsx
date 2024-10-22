@@ -1,86 +1,15 @@
-import { type Metadata } from 'next'
+'use client'
 import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { useTranslation } from '@/context/TranslationContext'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
 import khLogo from '@/images/logos/knowledgehive.png'
 import miseboxLogo from '@/images/logos/misebox.ico'
 import pideisaLogo from '@/images/logos/pideisa.png'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
 import poscoLogo from '@/images/logos/posco.png'
 import wmaLogo from '@/images/logos/wmalogo.png'
-
-const projects = [
-  {
-    name: 'Misebox',
-    description:
-      'Web application for creating digital and paper menus, where I worked on front-end development using React, allowing multiple users with different roles and online menu viewing.',
-    link: { href: 'https://app.misebox.io/', label: 'misebox.com' },
-    logo: miseboxLogo,
-    public: true,
-  },
-  {
-    name: 'World Martial Arts',
-    description:
-      'Marketplace platform for martial arts schools, where students can sign up, explore schools, and make purchases directly.',
-    link: { href: 'https://www.wmaonline.com/', label: 'wmaonline.com' },
-    logo: wmaLogo,
-    public: true,
-  },
-  {
-    name: 'Knowledge Hive',
-    description:
-      'Web application where recruiters post projects, and freelancers can search and apply to work on them. Implemented the Stripe API for subscriptions and payments.',
-    link: { href: 'https://knowledgehive.co/', label: 'knowledgehive.co' },
-    logo: khLogo,
-    public: true,
-  },
-  {
-    name: 'Pideisa',
-    description:
-      'Web application for instrument calibration management, including complex algorithms for thermocouple calibration using JavaScript and DRF.',
-    link: { href: 'https://www.pideisa.com/', label: 'pideisa.com' },
-    logo: pideisaLogo,
-    public: true,
-  },
-  {
-    name: 'Posco',
-    description:
-      'Internal rewards program for a company, developed using Python and Django for the back end and React Native for the application. Built from scratch and adapted to client changes.',
-    link: {
-      href: 'https://www.poscomexico.com.mx/mx/main/getMain.do',
-      label: 'poscomexico.com',
-    },
-    logo: poscoLogo,
-    public: true,
-  },
-  {
-    name: 'Zplendid',
-    description:
-      'Back-end development for a medical application to schedule bariatric surgeries, using Python and Django.',
-    link: { href: '#', label: 'zplendid.com' },
-    logo: logoAnimaginary,
-    public: false,
-  },
-  {
-    name: 'Doctor Pro',
-    description:
-      'Application for managing medical services, where I improved deployment to the Play Store and App Store and worked on unit testing using TestFlight and React Native development.',
-    link: { href: '#', label: 'doctorpro.com' },
-    logo: logoAnimaginary,
-    public: false,
-  },
-  {
-    name: 'Digitab',
-    description:
-      'Web application for evaluating business opportunities, developed in C# and Windows Forms. Created a virtual printer and a React Native app for receipt visualization and digitization.',
-    link: { href: 'https://www.ditabapp.com/', label: 'digitabapp.com' },
-    logo: logoAnimaginary,
-    public: true,
-  },
-]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -92,17 +21,74 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   )
 }
-export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Projects I have worked on to solve problems and create impact.',
-}
 
 export default function Projects() {
+  const { t } = useTranslation()
+
+  const projects = [
+    {
+      name: 'Misebox',
+      description: t('miseBoxDescription'), // Usando la traducción
+      link: { href: 'https://app.misebox.io/', label: 'misebox.com' },
+      logo: miseboxLogo,
+      public: true,
+    },
+    {
+      name: 'World Martial Arts',
+      description: t('worldMartialArtsDescription'), // Usando la traducción
+      link: { href: 'https://www.wmaonline.com/', label: 'wmaonline.com' },
+      logo: wmaLogo,
+      public: true,
+    },
+    {
+      name: 'Knowledge Hive',
+      description: t('knowledgeHiveDescription'), // Usando la traducción
+      link: { href: 'https://knowledgehive.co/', label: 'knowledgehive.co' },
+      logo: khLogo,
+      public: true,
+    },
+    {
+      name: 'Pideisa',
+      description: t('pideisaDescription'), // Usando la traducción
+      link: { href: 'https://www.pideisa.com/', label: 'pideisa.com' },
+      logo: pideisaLogo,
+      public: true,
+    },
+    {
+      name: 'Posco',
+      description: t('poscoDescription'), // Usando la traducción
+      link: {
+        href: 'https://www.poscomexico.com.mx/mx/main/getMain.do',
+        label: 'poscomexico.com',
+      },
+      logo: poscoLogo,
+      public: true,
+    },
+    {
+      name: 'Zplendid',
+      description: t('zplendidDescription'), // Usando la traducción
+      link: { href: '#', label: 'zplendid.com' },
+      logo: logoAnimaginary,
+      public: false,
+    },
+    {
+      name: 'Doctor Pro',
+      description: t('doctorProDescription'), // Usando la traducción
+      link: { href: '#', label: 'doctorpro.com' },
+      logo: logoAnimaginary,
+      public: false,
+    },
+    {
+      name: 'Digitab',
+      description: t('digitabDescription'), // Usando la traducción
+      link: { href: 'https://www.ditabapp.com/', label: 'digitabapp.com' },
+      logo: logoAnimaginary,
+      public: true,
+    },
+  ]
+
   return (
-    <SimpleLayout
-      title="Projects I have worked on to create solutions and impact."
-      intro="Over the years, I have been involved in several projects that I am proud of. These projects span various technologies and industries, focusing on delivering real-world solutions. While I have worked on many more, here are some of the most relevant. Some of these are public, so feel free to explore."
-    >
+    <SimpleLayout title={t('projectsTitle')} intro={t('projectsIntroduction')}>
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
