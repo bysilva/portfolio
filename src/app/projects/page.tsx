@@ -10,6 +10,7 @@ import miseboxLogo from '@/images/logos/misebox.ico'
 import pideisaLogo from '@/images/logos/pideisa.png'
 import poscoLogo from '@/images/logos/posco.png'
 import wmaLogo from '@/images/logos/wmalogo.png'
+import sicaLogo from '@/images/logos/sica.png'
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -63,6 +64,13 @@ export default function Projects() {
       },
       logo: poscoLogo,
       public: true,
+    },
+    {
+      name: 'Sica',
+      description: t('posSystemDescription'), // Usando la traducción
+      link: { href: '', label: '' },
+      logo: sicaLogo,
+      public: false,
     },
     {
       name: 'Zplendid',

@@ -59,6 +59,8 @@ const translations = {
       'Application for managing medical services, where I improved deployment to the Play Store and App Store and worked on unit testing using TestFlight and React Native development.',
     digitabDescription:
       'Web application for evaluating business opportunities, developed in C# and Windows Forms. Created a virtual printer and a React Native app for receipt visualization and digitization.',
+    posSystemDescription:
+      'Point of sale system for managing cash register operations, expense administration, ticket control, supplier management, products, general balances, and orders. Developed with WPF, C#, and SQL Server. Currently used by more than 10 different establishments.',
   },
   es: {
     title:
@@ -103,6 +105,8 @@ const translations = {
       'Aplicación para gestionar servicios médicos, donde mejoré el despliegue en Play Store y App Store y trabajé en pruebas unitarias usando TestFlight y desarrollo en React Native.',
     digitabDescription:
       'Aplicación web para evaluar oportunidades de negocio, desarrollada en C# y Windows Forms. Creé una impresora virtual y una aplicación en React Native para la visualización y digitalización de recibos.',
+    posSystemDescription:
+      'Sistema punto de venta para control de operaciones en caja, administración de gastos, control de tickets, administración de proveedores, productos, balances generales y pedidos. Realizado con WPF, C# y SQL Server. Actualmente es utilizado por más de 10 establecimientos distintos.',
   },
 }
 
