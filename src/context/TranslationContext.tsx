@@ -1,6 +1,10 @@
-// TranslationContext.tsx
-
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react'
 import translations from '@/utils/translations'
 
 type Locale = 'en' | 'es'
@@ -19,8 +23,12 @@ const TranslationContext = createContext<TranslationContextType | undefined>(
 export const TranslationProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const storedLocale = (localStorage.getItem('locale') as Locale) || 'en'
-  const [locale, setLocale] = useState<Locale>(storedLocale)
+  const [locale, setLocale] = useState<Locale>('en')
+
+  useEffect(() => {
+    const storedLocale = (localStorage.getItem('locale') as Locale) || 'en'
+    setLocale(storedLocale)
+  }, [])
 
   const changeLanguage = (newLocale: Locale) => {
     setLocale(newLocale)
