@@ -15,6 +15,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import SkillsTable from '@/components/SkillsTable'
 import Resume from '@/components/Resume'
 import { useTranslation } from '@/context/TranslationContext'
+import Courses from '@/components/Courses'
 
 function SocialLink({
   icon: Icon,
@@ -95,6 +96,7 @@ export default function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
+            <Courses />
           </div>
         </div>
       </Container>
