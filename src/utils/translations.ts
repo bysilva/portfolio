@@ -63,7 +63,7 @@ const translations = {
       'Point of sale system for managing cash register operations, expense administration, ticket control, supplier management, products, general balances, and orders. Developed with WPF, C#, and SQL Server. Currently used by more than 10 different establishments.',
     courses: 'Courses',
     moreofme: 'More about me',
-    download: 'download',
+    download: 'Download',
   },
   es: {
     title:
