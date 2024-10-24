@@ -35,7 +35,7 @@ export function Footer() {
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Edgar Silva. All rights
-                reserved.
+                reserved. Made with ❤️
               </p>
             </div>
           </ContainerInner>

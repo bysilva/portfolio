@@ -18,12 +18,15 @@ const skills: Skill[] = [
   },
   { technology: 'Git', progress: 90, color: 'bg-black' },
   { technology: 'Python', progress: 85, color: 'bg-teal-500' },
-  { technology: 'Jira', progress: 80, color: 'bg-blue-500' },
-  { technology: 'SQL', progress: 70, color: 'bg-gray-500' },
+  { technology: 'Jira', progress: 85, color: 'bg-blue-500' },
+  { technology: 'Routing & Switching', progress: 85, color: 'bg-blue-500' },
+  { technology: 'SQL Server', progress: 80, color: 'bg-gray-500' },
+  { technology: 'MySQL', progress: 75, color: 'bg-gray-500' },
+  { technology: 'IoT', progress: 70, color: 'bg-blue-500' },
   { technology: 'Docker', progress: 50, color: 'bg-blue-500' },
   { technology: 'Vue', progress: 30, color: 'bg-green-500' },
   { technology: 'Angular', progress: 30, color: 'bg-red-500' },
-  { technology: 'AWS', progress: 10, color: 'bg-orange-500' },
+  { technology: 'AWS', progress: 20, color: 'bg-orange-500' },
 ]
 
 const SkillsTable: React.FC = () => {
