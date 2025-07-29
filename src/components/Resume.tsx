@@ -3,6 +3,8 @@
 import { Button } from '@/components/Button'
 import { useTranslation } from '@/context/TranslationContext'
 import alluxiLogo from '@/images/logos/alluxi.png'
+import janusLogo from '@/images/logos/janus.jpeg'
+import terniumLogo from '@/images/logos/ternium.png'
 import Image, { type ImageProps } from 'next/image'
 
 interface Role {
@@ -81,6 +83,20 @@ function Resume() {
       logo: alluxiLogo,
       start: '2021',
       end: '2024',
+    },
+    {
+      company: 'Janus Automation',
+      title: 'Full Stack Developer',
+      logo: janusLogo,
+      start: '2024',
+      end: 'Present',
+    },
+    {
+      company: 'Ternium México',
+      title: 'Project Fullstack Engineer',
+      logo: terniumLogo,
+      start: '2024',
+      end: 'Present',
     },
   ]
 

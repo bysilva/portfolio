@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import { useTranslation } from '@/context/TranslationContext'
-import imageTwo from '@/images/photos/image-2.jpg'
+import imageTwo from '@/images/photos/image-6.png'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({

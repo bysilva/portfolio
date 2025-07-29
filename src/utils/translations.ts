@@ -3,37 +3,20 @@
 const translations = {
   en: {
     title: 'Software Engineer, Cloud Enthusiast, and Tech Passionate.',
-    description: `I’m Edgar, a software engineer based in Monterrey. With four years
-    of professional experience, I’ve worked with technologies like .NET,
-    C#, Python, Django, React, and TypeScript. I’m passionate about
-    cloud technologies and have a strong interest in AWS. My goal is to
-    build innovative solutions while maintaining a healthy balance
-    between professional growth and personal well-being.`,
-    about: 'About',
+    description: `I’m Edgar, a software engineer based in Monterrey. With four years of professional experience, I’ve worked with technologies like .NET, C#, Python, Django, React, and TypeScript. I’m passionate about cloud technologies and deeply interested in AWS. Beyond coding, I believe true innovation comes from asking the right questions and balancing technical skill with personal well-being.`,
+    about: 'More about me',
     projects: 'Projects',
     aboutTitle: `I’m Edgar Eduardo. I live in Monterrey, where I build the future.`,
-    aboutParagraphOne: `I started my professional career by graduating as a systems
-    engineer, beginning as an intern at the renowned Comisión Federal
-    de Electricidad (CFE) in Sabinas.`,
-    aboutParagraphTwo: `My contributions in various internal projects opened the door for
-    me to move to Monterrey, where I was recruited by Alluxi after
-    finishing my internship.`,
-    aboutParagraphThree: `At Alluxi, my technical skills grew, particularly in .NET,
-    allowing me to deepen my knowledge in C#. I also had the
-    opportunity to work on various projects using Python, Django and,
-    more recently, I’ve developed strong skills in React and
-    TypeScript.`,
-    aboutParagraphFour: `I have a keen interest in AWS and cloud services. Beyond
-    technology, I am passionate about flying drones, making
-    promotional videos, and capturing landscapes through video and
-    photography.`,
-    aboutParagraphFive: `Throughout my journey, I’ve learned that achieving success
-    is not just about honing technical skills, but also about
-    maintaining a healthy balance in life. I believe in the importance
-    of nurturing both physical and mental well-being, as they are
-    crucial to sustaining long-term growth and creativity. By
-    dedicating time to my health and personal development, I’m
-    able to bring my best self to every project and challenge I face.`,
+    aboutParagraphOne: `I started my professional career by graduating as a systems engineer and beginning as an intern at the renowned Comisión Federal de Electricidad (CFE) in Sabinas. From early on, I realized technology is just a tool to transform ideas into reality, but real change is driven by the questions we ask and the intentions behind them.`,
+
+    aboutParagraphTwo: `My path led me to Monterrey, where after my internship I was recruited by Alluxi. Each project was a chance to discover that beyond code lies a human narrative, a story waiting to be told with precision and meaning.`,
+
+    aboutParagraphThree: `At Alluxi, I strengthened my technical skills, especially in .NET and C#. I also explored Python, Django, and more recently React and TypeScript. However, my focus is not on accumulating knowledge, but on understanding how each technology can serve to build solutions that truly matter.`,
+
+    aboutParagraphFour: `Beyond programming, I am passionate about capturing the world from different perspectives: flying drones, creating promotional videos, and photographing landscapes. These moments allow my mind to relax and ideas to come alive, reminding me that everything is connected—from the tangible to the abstract.`,
+
+    aboutParagraphFive: `I’ve learned that success isn’t just about honing technical skills, but balancing mind and body, thought and action. Nurturing physical and mental well-being is essential to sustaining creativity and meeting challenges with clarity and renewed energy. This way, I can give my best in every project, always focused on what truly matters.`,
+
     followOnGithub: 'Follow on GitHub',
     followOnLinkedIn: 'Follow on LinkedIn',
     email: 'eepsmr48@gmail.com',
@@ -67,21 +50,22 @@ const translations = {
   },
   es: {
     title:
-      'Ingeniero de Software, Entusiasta de la Nube y Apasionado por la Tecnología.',
-    description: `Soy Edgar, un ingeniero de software con sede en Monterrey. Con cuatro años
-    de experiencia profesional, he trabajado con tecnologías como .NET,
-    C#, Python, Django, React y TypeScript. Me apasionan las
-    tecnologías en la nube y tengo un gran interés en AWS. Mi objetivo es
-    construir soluciones innovadoras mientras mantengo un equilibrio
-    saludable entre el crecimiento profesional y el bienestar personal.`,
-    about: 'Acerca de',
+      'Ingeniero de Software, Explorador de Ideas y Apasionado por la Innovación Consciente.',
+
+    description: `Soy Edgar, ingeniero de software en Monterrey con cuatro años de experiencia en .NET, C#, Python, Django, React y TypeScript. He trabajado también con sistemas SCADA e IoT, y más que solo manejar tecnología, sé y entiendo lo que se necesita para crear soluciones reales, combinando reflexión, técnica y un enfoque claro en resultados que realmente importan.`,
+
+    about: 'Mas acerca de mi',
     projects: 'Proyectos',
     aboutTitle: `Soy Edgar Eduardo. Vivo en Monterrey, donde construyo el futuro.`,
-    aboutParagraphOne: `Comencé mi carrera profesional al graduarme como ingeniero en sistemas, comenzando como practicante en la reconocida Comisión Federal de Electricidad (CFE) en Sabinas.`,
-    aboutParagraphTwo: `Mis contribuciones en varios proyectos internos abrieron la puerta para que me mudara a Monterrey, donde fui reclutado por Alluxi después de terminar mi pasantía.`,
-    aboutParagraphThree: `En Alluxi, mis habilidades técnicas crecieron, particularmente en .NET, permitiéndome profundizar mis conocimientos en C#. También tuve la oportunidad de trabajar en varios proyectos utilizando Python, Django y, más recientemente, he desarrollado habilidades sólidas en React y TypeScript.`,
-    aboutParagraphFour: `Tengo un gran interés en AWS y servicios en la nube. Más allá de la tecnología, me apasiona volar drones, hacer videos promocionales y capturar paisajes a través de videos y fotografía.`,
-    aboutParagraphFive: `A lo largo de mi viaje, he aprendido que alcanzar el éxito no se trata solo de perfeccionar las habilidades técnicas, sino también de mantener un equilibrio saludable en la vida. Creo en la importancia de nutrir tanto el bienestar físico como mental, ya que son cruciales para mantener un crecimiento y creatividad a largo plazo. Al dedicar tiempo a mi salud y desarrollo personal, puedo dar lo mejor de mí en cada proyecto y desafío que enfrento.`,
+    aboutParagraphOne: `Comencé mi carrera profesional al graduarme como ingeniero en sistemas, iniciando como practicante en la Comisión Federal de Electricidad (CFE) en Sabinas. Desde temprano entendí que la tecnología es solo una herramienta para transformar ideas en realidad, pero lo que realmente impulsa el cambio son las preguntas que nos hacemos y las intenciones detrás de ellas.`,
+
+    aboutParagraphTwo: `Mi trayectoria me llevó a Monterrey, donde tras mi pasantía fui reclutado por Alluxi. Cada proyecto fue una oportunidad para descubrir que más allá del código hay una narrativa humana, una historia que espera ser contada con precisión y sentido.`,
+
+    aboutParagraphThree: `En Alluxi fortalecí mis habilidades técnicas, especialmente en .NET y C#. También exploré Python, Django, y más recientemente React y TypeScript. Pero mi enfoque no está en acumular conocimiento, sino en entender cómo cada tecnología puede servir para construir soluciones que realmente importen.`,
+
+    aboutParagraphFour: `Más allá de la programación, me apasiona capturar el mundo desde distintas perspectivas: volar drones, crear videos promocionales y fotografiar paisajes. Estos momentos permiten que mi mente se relaje y las ideas cobren vida, recordándome que todo está conectado, desde lo tangible hasta lo abstracto.`,
+
+    aboutParagraphFive: `He aprendido que el éxito no reside solo en perfeccionar habilidades técnicas, sino en equilibrar mente y cuerpo, pensamiento y acción. Nutrir el bienestar físico y mental es esencial para sostener la creatividad y enfrentar cada desafío con claridad y energía renovada. Así puedo entregar lo mejor en cada proyecto, con la mirada siempre puesta en lo que realmente importa.`,
     followOnGithub: 'Seguir en GitHub',
     followOnLinkedIn: 'Seguir en LinkedIn',
     email: 'eepsmr48@gmail.com',
@@ -89,9 +73,9 @@ const translations = {
     downloadCVENG: 'Descargar CV ENG',
     downloadCVESP: 'Descargar CV ESP',
     projectsTitle:
-      'Proyectos en los que he trabajado para crear soluciones e impacto.',
+      'Proyectos en los que he colaborado para crear soluciones e impacto',
     projectsIntroduction:
-      'A lo largo de los años, he estado involucrado en varios proyectos de los que estoy orgulloso. Estos proyectos abarcan diversas tecnologías e industrias, centrándose en ofrecer soluciones del mundo real. Aunque he trabajado en muchos más, aquí están algunos de los más relevantes. Algunos de estos son públicos, así que siéntete libre de explorarlos.',
+      'A lo largo de mi carrera, he participado en múltiples proyectos que me han permitido crecer profesionalmente y aportar valor. Aquí comparto una selección de proyectos públicos que reflejan parte de mi experiencia y habilidades. Respeto plenamente la confidencialidad y privacidad de mis empleadores, por lo que algunos proyectos permanecen privados o bloqueados. Si deseas conocer más detalles, no dudes en contactarme.',
     miseBoxDescription:
       'Aplicación web para crear menús digitales y en papel, donde trabajé en el desarrollo front-end usando React, permitiendo múltiples usuarios con diferentes roles y visualización de menús en línea.',
     worldMartialArtsDescription:
@@ -111,7 +95,7 @@ const translations = {
     posSystemDescription:
       'Sistema punto de venta para control de operaciones en caja, administración de gastos, control de tickets, administración de proveedores, productos, balances generales y pedidos. Realizado con WPF, C# y SQL Server. Actualmente es utilizado por más de 10 establecimientos distintos.',
     courses: 'Cursos',
-    moreofme: 'Mas acerca de mi',
+    moreofme: 'Más acerca de mí',
     download: 'Descargar',
   },
 }

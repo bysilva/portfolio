@@ -1,64 +1,125 @@
 import React from 'react'
 
-interface Skill {
+interface SkillItem {
   technology: string
-  progress: number
-  color: string
+  level: 'Básico' | 'Intermedio' | 'Avanzado'
 }
 
-const skills: Skill[] = [
-  { technology: 'React / Native', progress: 90, color: 'bg-blue-500' },
-  { technology: 'C#', progress: 90, color: 'bg-purple-600' },
-  { technology: 'WPF (MVVM)', progress: 90, color: 'bg-purple-600' },
-  { technology: 'HTML,CSS,JS', progress: 90, color: 'bg-orange-500' },
+interface SkillCategory {
+  category: string
+  items: SkillItem[]
+}
+
+const skills: SkillCategory[] = [
   {
-    technology: 'API RESTful (.NET Core, DRF)',
-    progress: 90,
-    color: 'bg-blue-500',
+    category: 'Frontend',
+    items: [
+      { technology: 'React / Native', level: 'Avanzado' },
+      { technology: 'HTML, CSS, JS', level: 'Avanzado' },
+      { technology: 'Angular', level: 'Intermedio' },
+      { technology: 'Vue', level: 'Básico' },
+      { technology: 'Tailwind CSS', level: 'Avanzado' },
+      { technology: 'Framer Motion', level: 'Intermedio' },
+      { technology: 'Electron', level: 'Intermedio' },
+    ],
   },
-  { technology: 'Git', progress: 90, color: 'bg-black' },
-  { technology: 'Python', progress: 85, color: 'bg-teal-500' },
-  { technology: 'Jira', progress: 85, color: 'bg-blue-500' },
-  { technology: 'Routing & Switching', progress: 85, color: 'bg-blue-500' },
-  { technology: 'SQL Server', progress: 80, color: 'bg-gray-500' },
-  { technology: 'MySQL', progress: 75, color: 'bg-gray-500' },
-  { technology: 'IoT', progress: 70, color: 'bg-blue-500' },
-  { technology: 'Docker', progress: 50, color: 'bg-blue-500' },
-  { technology: 'Vue', progress: 30, color: 'bg-green-500' },
-  { technology: 'Angular', progress: 30, color: 'bg-red-500' },
-  { technology: 'AWS', progress: 20, color: 'bg-orange-500' },
+  {
+    category: 'Backend',
+    items: [
+      { technology: 'C#', level: 'Avanzado' },
+      { technology: 'WPF (MVVM)', level: 'Avanzado' },
+      { technology: 'API RESTful (.NET Core, DRF)', level: 'Avanzado' },
+      { technology: 'Python', level: 'Avanzado' },
+      { technology: 'Django', level: 'Avanzado' },
+    ],
+  },
+  {
+    category: 'Base de Datos',
+    items: [
+      { technology: 'SQL Server', level: 'Avanzado' },
+      { technology: 'MySQL / SQLite', level: 'Intermedio' },
+    ],
+  },
+  {
+    category: 'DevOps / Infraestructura',
+    items: [
+      { technology: 'Docker', level: 'Básico' },
+      { technology: 'NGINX', level: 'Intermedio' },
+      { technology: 'Ubuntu Server', level: 'Intermedio' },
+      { technology: 'AWS', level: 'Básico' },
+    ],
+  },
+  {
+    category: 'Control de Versiones y Gestión',
+    items: [
+      { technology: 'Git', level: 'Avanzado' },
+      { technology: 'Jira', level: 'Avanzado' },
+    ],
+  },
+  {
+    category: 'Redes y Sistemas',
+    items: [
+      { technology: 'Routing & Switching', level: 'Avanzado' },
+      { technology: 'SCADA Systems', level: 'Intermedio' },
+      { technology: 'IoT / IFM Sensors', level: 'Avanzado' },
+    ],
+  },
 ]
+
+const getColorByLevel = (level: string) => {
+  switch (level) {
+    case 'Avanzado':
+      return 'bg-green-600'
+    case 'Intermedio':
+      return 'bg-yellow-500'
+    case 'Básico':
+      return 'bg-red-500'
+    default:
+      return 'bg-gray-400'
+  }
+}
 
 const SkillsTable: React.FC = () => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full rounded-lg bg-white shadow-md">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="px-3 py-3 text-left font-semibold text-gray-600">
-              Technology
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">
+              Tecnología
             </th>
-            <th className="px-3 py-3 text-left font-semibold text-gray-600">
-              Progress
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">
+              Nivel
             </th>
           </tr>
         </thead>
         <tbody>
-          {skills.map((skill) => (
-            <tr key={skill.technology} className="border-b">
-              <td className="px-3 py-3">{skill.technology}</td>
-              <td className="px-3 py-3">
-                <div className="relative h-6 w-full rounded-full bg-gray-200">
-                  <div
-                    className={`absolute left-0 top-0 h-6 rounded-full ${skill.color}`}
-                    style={{ width: `${skill.progress}%` }}
-                  ></div>
-                  <span className="absolute inset-0 flex items-center justify-center font-semibold text-white">
-                    {skill.progress}%
-                  </span>
-                </div>
-              </td>
-            </tr>
+          {skills.map((group) => (
+            <React.Fragment key={group.category}>
+              <tr className="bg-gray-50">
+                <td colSpan={2} className="px-4 py-3 font-bold text-zinc-700">
+                  {group.category}
+                </td>
+              </tr>
+              {group.items.map((skill) => (
+                <tr
+                  key={skill.technology}
+                  className="border-b hover:bg-gray-50"
+                >
+                  <td className="px-4 py-3">{skill.technology}</td>
+                  <td className="px-4 py-3">
+                    <span
+                      className={`inline-block rounded-full px-3 py-1 text-sm font-semibold text-white ${getColorByLevel(
+                        skill.level,
+                      )}`}
+                      style={{ width: '7rem', textAlign: 'center' }}
+                    >
+                      {skill.level}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </React.Fragment>
           ))}
         </tbody>
       </table>
