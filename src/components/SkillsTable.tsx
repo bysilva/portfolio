@@ -69,26 +69,26 @@ const skills: SkillCategory[] = [
 const getColorByLevel = (level: string) => {
   switch (level) {
     case 'Avanzado':
-      return 'bg-green-600'
+      return 'bg-green-600 dark:bg-green-500'
     case 'Intermedio':
-      return 'bg-yellow-500'
+      return 'bg-yellow-500 dark:bg-yellow-400 text-black'
     case 'Básico':
-      return 'bg-red-500'
+      return 'bg-red-500 dark:bg-red-400'
     default:
-      return 'bg-gray-400'
+      return 'bg-gray-400 dark:bg-gray-600'
   }
 }
 
 const SkillsTable: React.FC = () => {
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full rounded-lg bg-white shadow-md">
-        <thead className="bg-gray-100">
+      <table className="min-w-full rounded-lg bg-white shadow-md dark:bg-zinc-900">
+        <thead className="bg-gray-100 dark:bg-zinc-800">
           <tr>
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
               Tecnología
             </th>
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-gray-300">
               Nivel
             </th>
           </tr>
@@ -96,17 +96,22 @@ const SkillsTable: React.FC = () => {
         <tbody>
           {skills.map((group) => (
             <React.Fragment key={group.category}>
-              <tr className="bg-gray-50">
-                <td colSpan={2} className="px-4 py-3 font-bold text-zinc-700">
+              <tr className="bg-gray-50 dark:bg-zinc-800">
+                <td
+                  colSpan={2}
+                  className="px-4 py-3 font-bold text-zinc-700 dark:text-zinc-200"
+                >
                   {group.category}
                 </td>
               </tr>
               {group.items.map((skill) => (
                 <tr
                   key={skill.technology}
-                  className="border-b hover:bg-gray-50"
+                  className="border-b border-gray-200 hover:bg-gray-50 dark:border-zinc-700 dark:hover:bg-zinc-700"
                 >
-                  <td className="px-4 py-3">{skill.technology}</td>
+                  <td className="px-4 py-3 text-gray-900 dark:text-gray-100">
+                    {skill.technology}
+                  </td>
                   <td className="px-4 py-3">
                     <span
                       className={`inline-block rounded-full px-3 py-1 text-sm font-semibold text-white ${getColorByLevel(

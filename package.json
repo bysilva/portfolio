@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll"
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
