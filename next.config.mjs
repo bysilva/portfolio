@@ -12,7 +12,7 @@ const nextConfig = {
   },
   assetPrefix: isProd ? '/portfolio/' : '',
   basePath: isProd ? '/portfolio' : '',
-  // output: 'export',
+  output: 'export',
   webpack: (config) => {
     config.cache = false
     return config
