@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll --cname www.mywebsite.com"
+    "deploy": "gh-pages -d out --nojekyll"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
